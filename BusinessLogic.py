@@ -39,43 +39,43 @@ item5 = 5
 item6 = 6
 item7 = 7
 
-request = input("Enter the item number you want to purchase, please?\n")
+requested_number = input("Enter the item number you want to purchase, please?\n")
 
  
-if request in catalogue:
+if requested_number in catalogue:
 
-    print( "You've chosen item " + request)
+    print( "You've chosen item " + requested_number)
 
 else:
     print("error 01, try again, this item does not seem to be in sale right now :/")
     exit()
 
 # Math part here
-if request =="1":
+if requested_number =="1":
     price = (item1_construct_price*items_price_multiplier) + item1_shipping_price_CDN
     print(str(price) + " is your price")
 
-elif request =="2":
+elif requested_number =="2":
     price = (item2_construct_price*items_price_multiplier) + item2_shipping_price_CDN
     print(str(price) + " is your price")
 
-elif request =="3":
+elif requested_number =="3":
     price = (item3_construct_price*items_price_multiplier) + item3_shipping_price_CDN
     print(str(price) + " is your price")
 
-elif request =="4":
+elif requested_number =="4":
     price = (item4_construct_price*items_price_multiplier) + item4_shipping_price_CDN
     print(str(price) + " is your price")
 
-elif request =="5":
+elif requested_number =="5":
     price = (item5_construct_price*items_price_multiplier) + item5_shipping_price_CDN
     print(str(price) + " is your price")
 
-elif request =="6":
+elif requested_number =="6":
     price = (item6_construct_price*items_price_multiplier) + item6_shipping_price_CDN
     print(str(price) + " is your price")
 
-elif request =="7":
+elif requested_number =="7":
     price = (item7_construct_price*items_price_multiplier) + item7_shipping_price_CDN
     print(str(price) + " is your price")
 
@@ -119,6 +119,14 @@ else:
 price_polished = round(full_price_raw, 2)
 print("Your Full price was," + str(price_polished) + "CAD" + "\nProcessing payment now." )
  
- 
-    
+import pandas as pd
+
+daily_customer_set = { 
+     "Items" : ["item "+ requested_number ],
+     "Prices": price_polished
+}
+
+daily_customer_sheet = pd.DataFrame(daily_customer_set)
+
+print(daily_customer_sheet)
     
