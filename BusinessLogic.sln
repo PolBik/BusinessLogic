@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BusinessLogic", "BusinessLogic.pyproj", "{396DA3B9-4AB5-46B5-A815-2E20B23D33B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{396DA3B9-4AB5-46B5-A815-2E20B23D33B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{396DA3B9-4AB5-46B5-A815-2E20B23D33B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B836E7A7-8639-49A9-9DD2-179A76411848}
+	EndGlobalSection
+EndGlobal
