@@ -119,14 +119,48 @@ else:
 price_polished = round(full_price_raw, 2)
 print("Your Full price was," + str(price_polished) + "CAD" + "\nProcessing payment now." )
  
+from csv import reader
+from sqlite3 import Row
+from openpyxl import Workbook
+from openpyxl import load_workbook
+import openpyxl
 import pandas as pd
+import datetime
 
 daily_customer_set = { 
      "Items" : ["item "+ requested_number ],
      "Prices": price_polished
 }
 
-daily_customer_sheet = pd.DataFrame(daily_customer_set)
+daily_customers = pd.DataFrame(daily_customer_set)
 
-print(daily_customer_sheet)
-    
+print(daily_customers)
+
+ # read the thing ? 'reading = pd.read_csv(".csv"), just use the correct  
+
+# sales.head(8) #first 8 rows of the "sales" dataFrame, uses tail() to start from the back of the DataFrame
+
+# sales(dtype) # Gives out each cells' datatype
+
+row_number = input("What was that customers number?")
+
+
+wb = load_workbook("daily_customer_sheet.xlsx") # S U P E R Important, create the workbook fine, but whatever you do dont create a new worksheet every time LMAO, damn that took me a while LOL :P
+
+ws1 = wb.active
+
+ws1["A1"] = "Name"  #Doing the column titles here! This is kidna rededundant, but I jsut want to make sure the titles stay in place. Maybe I can lock these things in the future
+ws1["B1"] = "Price"
+ws1["C1"] = "PayProvider"
+ws1["D1"] = "Date&Time"
+
+
+ws1['A0'+row_number] = "item "+ requested_number #Assigning values to rows here. 
+ws1['B0'+row_number] = price_polished
+ws1['C0'+row_number] = pay
+ws1['D0'+row_number] = datetime.datetime.now()
+
+#Okay this works when starting at 0, s it does 04, 05, etc. However, there should be an easier way to add the "+1" no?
+wb.save("daily_customer_sheet.xlsx") #saving to a file here.
+
+#Okay so good, this saves everything without overwiting any data. Superb.
