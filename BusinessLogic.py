@@ -5,7 +5,10 @@ catalogue = ["1", "2","3", "4", "5", "6", "7"]
 # Payment Options
 payment_options = ["Visa", "Mastercard", "Debit", "PayPal"]
 
+#Taxes, hmhmmm, nearly forgot about those
 
+Quebec_GST = 0.05
+Quebec_QST = 0.09975
 
 # "Acquisition" Prices from the items
 
@@ -52,7 +55,7 @@ else:
 
 # Math part here
 if requested_number =="1":
-    price = (item1_construct_price*items_price_multiplier) + item1_shipping_price_CDN
+    price = ((item1_construct_price*Quebec_GST) + (item1_construct_price*Quebec_QST) + (item1_construct_price*items_price_multiplier) + item1_shipping_price_CDN)
     print(str(price) + " is your price")
 
 elif requested_number =="2":

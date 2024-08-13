@@ -7,6 +7,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BusinessLogic", "BusinessLo
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DataSheetPart", "..\DataSheetPart\DataSheetPart.pyproj", "{5FDAA177-2778-4319-9577-5D29D278722B}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WebPart", "..\WebPart\WebPart.pyproj", "{ED412FA9-D0DF-4CE8-94B7-93A5D36048F4}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WebProject", "..\WebProject\WebProject.pyproj", "{2A4189C0-AFC3-4C0B-9D0B-4FDF07F3396A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,14 @@ Global
 		{396DA3B9-4AB5-46B5-A815-2E20B23D33B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FDAA177-2778-4319-9577-5D29D278722B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5FDAA177-2778-4319-9577-5D29D278722B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED412FA9-D0DF-4CE8-94B7-93A5D36048F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED412FA9-D0DF-4CE8-94B7-93A5D36048F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED412FA9-D0DF-4CE8-94B7-93A5D36048F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED412FA9-D0DF-4CE8-94B7-93A5D36048F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4189C0-AFC3-4C0B-9D0B-4FDF07F3396A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4189C0-AFC3-4C0B-9D0B-4FDF07F3396A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4189C0-AFC3-4C0B-9D0B-4FDF07F3396A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4189C0-AFC3-4C0B-9D0B-4FDF07F3396A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
